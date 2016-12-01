@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>GoTLib - Вся серия романов "Песнь Льда и Огня" у нас.</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<header class="header">
+			<a class="glavn" link="#fff" alink="#fff" vlink="#fff" href="index.html"><h1 class="h1Head">GoTLib - Вся серия романов "Песнь Льда и Огня" у нас.</h1></a>
+			<!--<h2 class="h2Head">Уже доступно для всех пользователей.</h2> -->
+			<h2 class="h2Head">Поиск книг:</h2>
+			<div class="formaTop">	
+				<div class="forma">
+					<input id="name" name="name" list="nameOfBooks" placeholder="Название книги" autocomplete="on" />
+					<datalist id="nameOfBooks">
+						<!--<option value="Игра Престолов"></option>
+						<option value="Буря Мечей"></option>
+						<option value="Буря Мечей"></option>
+						<option value="Пир стервятников"></option>
+						<option value="Танец с драконами"></option>
+						<option value="Ветра зимы"></option>
+						<option value="Мечта о весне"></option>-->
+					</datalist>
+					<form action="https://www.ozon.ru/context/detail/id/26429564/" method="get"> 
+						<input id="subm" type="submit" value="Перейти">
+					</form>
+					<form action="video.html" method="get"> 
+						<input id="video" type="submit" value="Видео">
+					</form>
+					<form action="contest.html" method="get"> 
+						<input id="contest" type="submit" value="Внимание конкурс!">
+					</form>
+				</div>
+			</div>
+		</header>
+		<section class="sectionFirst">
+			<article class="thingOne">
+				<h2 class="h2First"><i>О нас:<i></h2>
+				<p class="pFirstOne">
+                    Давайте познакомимся.<br>
+                    Мы – компания «GoTLib».<br>
+                    Основным направлением нашей деятельности является дать возможность каждому ознакомиться с романами Джорджа Рэймонда Ричарда Мартина, а именно с циклом романов "Песнь Льда и Огня", по основам которого был снят замечательный сериал "Игра Престолов." </p>
+                <p class="pFirstTwo">Начнем с основных понятий: <br/> «Песнь Льда и Огня»  — серия эпических фэнтези-романов американского писателя и сценариста Джорджа Р. Р. Мартина. Мартин начал писать эту серию в 1991 году. Изначально задуманная как трилогия, к настоящему моменту она разрослась до пяти опубликованных томов, и ещё два находятся в проекте. Автором также написаны повести-приквелы и серия повестей, представляющих собой выдержки из основных романов серии. Одна из таких повестей, «Кровь дракона», была удостоена Премии Хьюго. Три первых романа серии были награждены премией «Локус» за лучший роман фэнтези в 1997, 1999 и 2001 годах соответственно.<br/>
+
+				На апрель 2015 года общие продажи книг серии во всем мире превысили 60 миллионов копий, они были переведены на 45 языков</p>
+                <p class="pFirstThree">
+                    Наша компания заботится о вашем будущем!<br> Каждый в нашей компании заинтересован в том,<br> чтобы все уголки мира могли прочитать и насладиться этим шедевром.<br>
+                    Мы работаем для вас.
+                </p>        
+			</article>
+			<script type="text/javascript">
+		var i = 0;
+		var answers = [
+			"Найди покой в своей душе, все остальное само тебя найдет.",
+			"Если ты внезапно очутился в яме, первое, что надо сделать - перестать копать.",
+			"В жизни надо быть упертым, но не бараном.",
+			"Праздник всегда нужно носить с собой.",
+			"Возможно все"];
+
+		$(function () {
+
+			$('.panel-text').click(function () {
+				i = Math.floor(Math.random() * answers.length)
+				showText(this, answers[i]);
+			}); ;
+
+			function showText(panel, text) {
+
+				var panel = $(panel);
+				var msg = $('.message', panel);
+				panel.fadeOut(500, function () {
+					msg.html(text);
+					panel.fadeIn(500);
+				});
+			}
+		});
+	
+	</script>
+			<p class="ok" align="center">Совет дня: </p>
+			<div class="ball">
+				<div class="panel-text">
+					<div class="message">
+						Кликните, чтобы узнать "совет дня".
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<p class="foot">©GoTLib 2016</p>
+			<div class="secret">
+			<form action=""></form>
+				<button class="button123" onclick='location.href="canvas.html"'><img src="images/1.png" alt="Secret" width="1px"></button>
+			</div>
+		</footer>
+	</div>
+</body>
+<script>
+	var fakeServerResponse = ['Игра Престолов', 'Битва Королей', 'Буря Мечей', 'Пир стервятников', 'Танец с драконами', 'Ветра зимы ', 'Мечта о весне'];
+	var datalist = document.getElementById('nameOfBooks');
+
+	document.getElementById('name').addEventListener('keyup', function () {
+    if (this.value.length === 0) {
+        return;
+    }
+
+    // Send Ajax request and loop of its result
+
+    datalist.textContent = '';
+    for (var i = 0; i < fakeServerResponse.length; i++) {
+        if (fakeServerResponse[i].indexOf(this.value) !== 0) {
+            continue;
+        }
+        var option = document.createElement('option');
+        option.value = fakeServerResponse[i];
+        datalist.appendChild(option);
+    }
+});
+</script>
+
+</html>

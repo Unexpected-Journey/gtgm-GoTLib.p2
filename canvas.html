@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+	<link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="wrap1">
+			<header class="header">
+				
+				<a class="glavn" href="index.html"><h1 class="h1Head">GoTLib - Вся серия романов "Песнь Льда и Огня" у нас.</h1></a>
+				<h1 class="h1Head1">Canvas by GotLib</h1>
+			</header>
+			<section class="section">
+				<canvas id="canvas" width="1024" height="480"></canvas><br>
+				<script>
+					 function coords(e) {
+       					 return {
+				            x: e.pageX - canvas.offsetLeft,
+				            y: e.pageY - canvas.offsetTop
+				        };
+				    }
+
+				    var ctx = document.getElementById("canvas").getContext("2d");
+
+				    var drawing = false;
+
+				    canvas.onmousedown = function (e) {
+				        var p = coords(e);
+				        ctx.beginPath();
+				        ctx.moveTo(p.x, p.y);
+				        drawing = true;
+				    }
+
+				    canvas.onmousemove = function (e) {
+				        if (drawing) {
+				            var p = coords(e);
+
+				            ctx.lineTo(p.x, p.y);
+				            ctx.stroke();
+				        }
+				    }
+
+				    canvas.onmouseup = function (e) {
+				        drawing = false;
+				    }
+
+				    function btc(c){
+				    	id = "" + c;
+				    	colorChanger(id);
+				    }
+				    function colorChanger() {
+				    	if(id == "0")
+				    	{
+				    		ctx.strokeStyle = "red";
+				    	}
+				    	else if(id == "1")
+				    		{
+				    			ctx.strokeStyle = "yellow";
+				    		}
+				    		else if(id == "2")
+				    			{	
+				    				ctx.strokeStyle = "green";
+				    			}
+				    			else if(id == "3")
+				    				{
+				    					ctx.strokeStyle = "blue";
+				    				}
+				    				else if(id == "4")
+				    					{
+				    						ctx.strokeStyle = "purple";
+				    					}	
+				    }
+				    ctx.strokeStyle = "red";
+				    ctx.lineWidth = 20;
+				    ctx.lineCap = "round";
+				    ctx.lineJoin = "round";
+				</script>
+				<div class="colors">
+					<button class="color1" onclick="btc(0)"><img src="images/s1.png" alt="s1"></button>
+					<button class="color2" onclick="btc(1)"><img src="images/s2.png" alt="s2"></button>
+					<button class="color3" onclick="btc(2)"><img src="images/s3.png" alt="s3"></button>
+					<button class="color4" onclick="btc(3)"><img src="images/s4.png" alt="s4"></button>
+					<button class="color5" onclick="btc(4)"><img src="images/s5.png" alt="s5"></button>
+				</div>
+			<button class="button" value="Reset" onclick='location.href="canvas.html"'>Reset</button>
+			</section>	
+			<footer class="footer">
+				<p class="foot">©GoTLib 2016</p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

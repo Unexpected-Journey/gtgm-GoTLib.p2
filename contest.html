@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style1.css">
+	<title>Contest</title>
+	<script type="text/javascript">
+		function valid(form){
+			var fail = false;
+			var failPass = false;
+			var name = form.name.value;
+			var surname = form.surname.value;
+			var state = form.state.value;
+			var password = form.password.value;
+			
+			var RePassword = form.RePassword.value;
+			if(name =="" || name ==" "){
+				fail="Вы не ввели имя";
+			}
+			
+			else if(surname =="" || surname ==" "){
+				fail="Вы не ввели фамилию";
+			}
+			
+			
+			else if(password!=RePassword){
+				failPass="Пароли не совпадают";
+			}
+			else if(state==""){
+				fail="Укажите пол";
+			}
+			if(fail){
+				alert(fail);
+			}
+			else
+			{
+				alert("Успех");
+				window.location = "index.html";
+			}
+		}
+	</script>
+</head>
+<body>
+	<header class="header">
+		<a class="glavn" href="index.html"><h1 class="h1Head">GoTLib - Вся серия романов "Песнь Льда и Огня" у нас.</h1></a>
+		<h1 class="h1Head1">Конкурс</h1>
+		<h2 class="h2Head">Хочешь получить весь цикл романов "Песнь Льда и Огня"? </h2>
+	</header>
+		
+	<section class="section">
+		<p class="privet">Для этого тебе нужно выполнить простые действия: зарегистрироваться и ждать.</p>
+		<p class="privet">Возможно, именно тебе прийдет наша посылка))</p>
+		<h2 class="h2First">Регистрация</h2>
+		<div class="che">
+		<form action="" method="post" name="test" id="form">
+			<label for="name">Имя:</label>
+			<input type="text" name="name" placeholder="Имя" id="name"><br><br>
+			<label for="surname">Фамилия:</label>
+			<input type="text" name="surname" placeholder="Фамилия" id="surname"><br><br>
+			<label for="name">Пароль:</label>
+			<input type="password" name="password" placeholder="Пароль" id="password"><br><br>
+			<label for="name">Проверка пароля:</label>
+			<input type="password" name="RePassword" placeholder="Проверка пароль" id="RePassword"><br><br>
+			<span>Пол</span>
+			<input type="radio" name="state" id="male" value="Мужской"><label for="male">Мужской</label>
+			<input type="radio" name="state" id="female" value="Женский"><label for="female">Женский</label><br>
+			<input type="button" onclick="valid(document.getElementById('form'))" value="Готово">
+		</form>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="ult">
+			<p class="foot">©GoTLib 2016</p>
+		</div>	
+	</footer>
+</body>
+</html>

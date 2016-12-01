@@ -1,0 +1,145 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*Start*/
+body{
+  background-color: #141414;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.wrap{
+
+}
+.h1Head{
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto 10px;
+ /* font-size:20px;*/
+
+}
+.h2Head{
+ 
+  text-align:center;
+  padding-top: 230px;
+  padding-left:0;
+ 
+
+}
+.header{
+  display:block;
+
+  background: #141414 url(../images/logoHead.jpg) no-repeat 50% 0%;
+  /*border-left: 1px solid #fff;
+  border-right: 1px solid #fff;*/
+  height: 373px;
+  margin: 0 auto;
+}
+/*.forma{
+  padding: 5px 0 0 595px;
+}*/
+/*.formaTop{
+  margin: 0 auto;
+}*/
+.forma{
+  display: block;
+  width:170px;
+  margin: 5px auto;
+}
+#subm{
+  margin: 0 0 0 50px;
+
+}
+#video{
+  margin: 0 0 0 -245%;
+}
+#contest{
+  margin: 0 0 0 265%;
+}
+.glavn:hover{
+  color: #fff;
+}
+
+.glavn:active{
+  color: #fff;
+}
+
+.glavn:visited{
+  color: #fff;
+}
+.h2First{
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  width: 90px;
+  margin: 15px auto;
+}
+.ok{
+ text-align: center;
+  border-bottom: 1px solid #fff;
+  width: 90px;
+  margin: 15px auto;
+}
+
+.message{
+  display: block;
+  font: 15px/125% Arial;
+  color:#0e9e3e;
+  text-align: center;
+  margin: 15px auto;
+}
+.message:hover{
+cursor:pointer;
+}
+.pFirstOne, .pFirstTwo, .pFirstThree{
+  display: block;
+  width: 900px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+.foot{
+  display:block;
+  text-align: center;
+  font-size: 15px;
+  margin: 7px auto;
+}
